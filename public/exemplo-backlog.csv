@@ -1,0 +1,4 @@
+name,reach,riceImpact,riceConfidence,effort,iceImpact,iceConfidence,iceEase,businessValue,timeCriticality,riskReduction,jobSize,moscow
+Lembretes de contas a pagar,60000,2,80,2.5,8,7,5,13,8,3,8,must
+Resumo mensal por e-mail,80000,1,80,1,6,8,8,8,3,2,3,should
+Modo escuro,50000,0.25,90,0.5,3,9,9,3,1,1,2,could
