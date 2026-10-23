@@ -4,6 +4,7 @@ import { METHODS, MethodId, blankItem } from "../lib/methods";
 
 const USED_BY: Record<(typeof CSV_COLUMNS)[number], MethodId | "all"> = {
   name: "all",
+  sprint: "all",
   reach: "rice",
   riceImpact: "rice",
   riceConfidence: "rice",

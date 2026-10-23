@@ -2,6 +2,7 @@ import { Item, MOSCOW_ORDER, MoscowCategory, blankItem } from "./methods";
 
 export const CSV_COLUMNS = [
   "name",
+  "sprint",
   "reach",
   "riceImpact",
   "riceConfidence",
@@ -109,6 +110,7 @@ export function importCsv(text: string): Item[] {
     return {
       ...d,
       name: (r[nameIdx] ?? "").trim().replace(/^'(?=[=+\-@])/, ""),
+      sprint: Math.max(0, Math.round(num(get("sprint"), d.sprint))),
       reach: num(get("reach"), d.reach),
       riceImpact: num(get("riceImpact"), d.riceImpact),
       riceConfidence: num(get("riceConfidence"), d.riceConfidence),

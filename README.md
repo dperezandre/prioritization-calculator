@@ -11,10 +11,18 @@ A web app to rank a backlog with **RICE, ICE, WSJF and MoSCoW**, compare methods
 ## ✨ Funcionalidades / Features
 - **4 métodos** de priorização com escalas de referência (impacto RICE 0,25–3, Fibonacci no WSJF).
 - **Comparador:** mostra a posição de cada item em cada método e a **divergência** entre eles, para apontar o que precisa de conversa.
+- **Aba Sprints:** compara a sprint em que cada história foi planejada com a ordem sugerida por cada método (mantendo o tamanho das sprints) e mostra a **aderência ao plano**.
 - **Gráfico valor × esforço** com quadrantes (ganhos rápidos, apostas grandes, preenchimentos, evitar).
 - **Importar/exportar CSV** (aceita `,` `;` e tab; um arquivo só com `name`/`title` já funciona). Exportação protegida contra injeção de fórmulas em planilhas.
 - **Guia dos métodos:** fórmula, quando usar e limitações.
 - Tema claro/escuro, responsivo, navegável por teclado e salvo em `localStorage`.
+
+## 🧪 Exemplo real: o backlog do projeto Mensagens
+O exemplo carregado por padrão são **26 histórias de usuário** do [mensagem-arep](https://github.com/dperezandre/mensagem-arep) (automação de WhatsApp), divididas em **7 sprints** conforme o plano de entrega do `ARQUITETURA.md`: fundação, conexão WhatsApp, cadastros, agendamentos, motor de envio, segurança/operação e deploy.
+
+Use a aba **Sprints** para validar o plano. No exemplo, os métodos puxam para as primeiras sprints histórias de segurança (opt-out, pausa global, limite diário), que reduzem risco de banimento, enquanto o plano começa pela fundação técnica. A diferença mostra o que os métodos enxergam (valor, risco, esforço) e o que eles não enxergam (**dependências**). Por isso a própria aba traz um aviso: use a comparação para questionar o plano, não para substituí-lo.
+
+> As estimativas do exemplo são julgamentos do autor para fins didáticos (alcance = pessoas atingidas, 6 = admin + ~5 clientes; esforço em pessoa-mês).
 
 ## 📐 Fórmulas
 | Método | Fórmula | Observação |
@@ -35,7 +43,7 @@ npm run build      # typecheck + build de produção
 ```
 
 ## 📥 Formato do CSV
-Veja [`public/exemplo-backlog.csv`](public/exemplo-backlog.csv). Colunas: `name, reach, riceImpact, riceConfidence, effort, iceImpact, iceConfidence, iceEase, businessValue, timeCriticality, riskReduction, jobSize, moscow`. Colunas ausentes recebem valores padrão.
+Veja [`public/exemplo-backlog.csv`](public/exemplo-backlog.csv). Colunas: `name, sprint, reach, riceImpact, riceConfidence, effort, iceImpact, iceConfidence, iceEase, businessValue, timeCriticality, riskReduction, jobSize, moscow`. Colunas ausentes recebem valores padrão.
 
 ## 🏗️ Estrutura
 ```

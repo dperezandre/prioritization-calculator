@@ -72,3 +72,12 @@ th:last-of-type .help-pop, th:nth-last-child(3) .help-pop { left: auto; right: -
 td.wrap { white-space: normal; min-width: 280px; }
 .link-btn { display: inline-block; padding: 6px 12px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); color: var(--primary); text-decoration: none; }
 .link-btn:hover { border-color: var(--primary); }
+.caveat { margin: 0 0 12px; padding: 10px 12px; border-left: 4px solid var(--should); background: var(--accent); border-radius: 6px; font-size: .92rem; }
+.table-wrap.short { min-height: 0; }
+.toolbar.spaced { margin: 18px 0 10px; }
+tr.selected td { background: var(--accent); }
+.pct { display: inline-block; min-width: 52px; padding: 2px 8px; border-radius: 6px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.delta { font-size: .85rem; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--border); }
+.delta.up { color: var(--could); border-color: var(--could); }
+.delta.down { color: var(--should); border-color: var(--should); }
+.delta.same { color: var(--muted); }

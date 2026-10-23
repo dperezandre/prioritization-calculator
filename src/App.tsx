@@ -3,12 +3,13 @@ import { Backlog } from "./components/Backlog";
 import { Chart } from "./components/Chart";
 import { Compare } from "./components/Compare";
 import { Guide } from "./components/Guide";
+import { Sprints } from "./components/Sprints";
 import { exportCsv, importCsv } from "./lib/csv";
 import { exampleItems } from "./lib/example";
 import { Lang, detectLang, getDict } from "./lib/i18n";
 import { Item, METHODS, MethodId, blankItem } from "./lib/methods";
 
-type Tab = "items" | "compare" | "chart" | "guide";
+type Tab = "items" | "compare" | "sprints" | "chart" | "guide";
 const STORAGE_KEY = "pc.items";
 
 function loadItems(lang: Lang): Item[] {
@@ -81,6 +82,7 @@ export default function App() {
   const tabs: [Tab, string][] = [
     ["items", t.tabItems],
     ["compare", t.tabCompare],
+    ["sprints", t.tabSprints],
     ["chart", t.tabChart],
     ["guide", t.tabGuide],
   ];
@@ -135,6 +137,7 @@ export default function App() {
       <main>
         {tab === "items" && <Backlog t={t} method={method} items={items} onChange={setItems} />}
         {tab === "compare" && <Compare t={t} items={items} />}
+        {tab === "sprints" && <Sprints t={t} items={items} method={method} onMethod={setMethod} />}
         {tab === "chart" && <Chart t={t} items={items} />}
         {tab === "guide" && <Guide t={t} />}
       </main>

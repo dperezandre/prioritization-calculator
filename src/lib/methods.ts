@@ -11,6 +11,8 @@ export const WSJF_SCALE = [1, 2, 3, 5, 8, 13, 20];
 export interface Item {
   id: string;
   name: string;
+  /** Sprint in which the story was planned (0 = not planned). */
+  sprint: number;
   // RICE
   reach: number; // people/events per period
   riceImpact: number; // 0.25 – 3
@@ -140,6 +142,7 @@ export function blankItem(partial: Partial<Item> = {}): Item {
   return {
     id: newId(),
     name: "",
+    sprint: 0,
     reach: 1000,
     riceImpact: 1,
     riceConfidence: 80,

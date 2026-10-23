@@ -1,4 +1,27 @@
-name,reach,riceImpact,riceConfidence,effort,iceImpact,iceConfidence,iceEase,businessValue,timeCriticality,riskReduction,jobSize,moscow
-Lembretes de contas a pagar,60000,2,80,2.5,8,7,5,13,8,3,8,must
-Resumo mensal por e-mail,80000,1,80,1,6,8,8,8,3,2,3,should
-Modo escuro,50000,0.25,90,0.5,3,9,9,3,1,1,2,could
+name,sprint,reach,riceImpact,riceConfidence,effort,iceImpact,iceConfidence,iceEase,businessValue,timeCriticality,riskReduction,jobSize,moscow
+US-01 Subir o ambiente local com Docker Compose,1,6,3,100,0.25,9,10,7,8,13,13,3,must
+US-02 Entrar no sistema com e-mail e senha,1,6,3,100,0.5,9,10,6,8,13,8,5,must
+US-03 Criar o administrador e as migrações no primeiro start,1,1,1,100,0.25,5,10,8,3,8,5,2,must
+US-04 Parear o WhatsApp lendo um QR Code,2,6,3,80,0.5,10,7,5,13,8,5,5,must
+US-05 Ver o status da conexão no cabeçalho,2,1,1,100,0.25,5,10,8,3,2,3,2,should
+US-06 Receber status de entrega pelo webhook,2,5,1,80,0.5,6,7,5,5,3,5,5,should
+US-07 Cadastrar cliente com nome e telefone,3,6,3,100,0.5,9,10,8,13,13,3,3,must
+US-08 Preencher o endereço pelo CEP,3,1,0.5,80,0.25,3,8,8,2,1,1,2,could
+US-09 Importar clientes por CSV,3,1,1,80,0.5,5,8,6,5,2,1,3,should
+US-10 Criar mensagem padrão com variáveis,3,6,3,100,0.5,9,9,7,13,13,3,5,must
+US-11 Ver a prévia da mensagem ao editar,3,1,1,80,0.25,5,9,8,3,1,1,2,could
+"US-12 Anexar imagem, áudio ou documento",3,5,2,80,1,7,7,4,8,3,2,8,should
+US-13 Agendar um envio único,4,6,3,100,0.5,9,9,7,13,13,3,3,must
+"US-14 Agendar envios recorrentes (diário, semanal, mensal)",4,5,2,80,1,8,7,4,8,5,2,8,should
+US-15 Ver as próximas 5 datas do agendamento,4,1,0.5,90,0.25,3,9,8,2,1,2,2,could
+US-16 Enviar as mensagens agendadas automaticamente,5,6,3,100,1,10,9,5,13,13,8,8,must
+US-17 Tentar de novo até 3 vezes quando o envio falha,5,5,2,80,0.5,7,8,6,8,5,8,3,should
+US-18 Respeitar intervalo aleatório e limite diário,5,6,3,80,0.5,8,7,6,8,8,20,3,must
+US-19 Consultar o histórico com filtros e status,5,1,2,100,0.75,7,9,6,8,3,5,5,should
+US-20 Reenviar manualmente uma mensagem com erro,5,1,1,100,0.25,4,9,8,3,1,2,2,could
+US-21 Pausar todos os envios com um botão,6,6,2,100,0.25,7,10,9,5,5,13,2,must
+US-22 Enviar uma mensagem de teste para o meu número,6,1,1,100,0.25,5,10,8,5,3,5,2,should
+US-23 Respeitar o opt-out de quem não quer receber,6,5,3,100,0.25,8,10,8,8,8,20,2,must
+US-24 Fazer backup diário do banco,6,6,2,80,0.25,6,9,8,5,3,13,2,should
+US-25 Publicar na Oracle Cloud com HTTPS,7,6,3,80,1,10,6,3,13,13,8,8,must
+US-26 Usar o tema escuro e o layout de celular,7,1,0.25,90,0.5,2,9,6,1,1,1,3,could

@@ -68,6 +68,7 @@ export function Backlog({ t, method, items, onChange }: Props) {
           <tr>
             <th>{t.rank}</th>
             <th>{t.name}<Help text={t.fieldHelp.name} /></th>
+            <th>{t.sprint}<Help text={t.fieldHelp.sprint} /></th>
             {fields.map((f) => (
               <th key={f.key}>{t[f.key]}<Help text={t.fieldHelp[f.key]} /></th>
             ))}
@@ -86,6 +87,16 @@ export function Backlog({ t, method, items, onChange }: Props) {
                   value={item.name}
                   placeholder={t.newItem}
                   onChange={(e) => update(item.id, { name: e.target.value })}
+                />
+              </td>
+              <td>
+                <input
+                  type="number"
+                  aria-label={t.sprint}
+                  value={item.sprint}
+                  min={0}
+                  step={1}
+                  onChange={(e) => update(item.id, { sprint: Math.max(0, Math.round(Number(e.target.value) || 0)) })}
                 />
               </td>
               {fields.map((f) => (
