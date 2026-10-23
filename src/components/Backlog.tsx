@@ -1,4 +1,5 @@
 import { Dict } from "../lib/i18n";
+import { Help } from "./Help";
 import {
   Item,
   MOSCOW_ORDER,
@@ -66,11 +67,11 @@ export function Backlog({ t, method, items, onChange }: Props) {
         <thead>
           <tr>
             <th>{t.rank}</th>
-            <th>{t.name}</th>
+            <th>{t.name}<Help text={t.fieldHelp.name} /></th>
             {fields.map((f) => (
-              <th key={f.key}>{t[f.key]}</th>
+              <th key={f.key}>{t[f.key]}<Help text={t.fieldHelp[f.key]} /></th>
             ))}
-            {method === "moscow" && <th>{t.moscow}</th>}
+            {method === "moscow" && <th>{t.moscow}<Help text={t.fieldHelp.moscow} /></th>}
             <th>{t.score}</th>
             <th aria-label={t.remove} />
           </tr>
